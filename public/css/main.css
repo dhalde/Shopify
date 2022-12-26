@@ -19,13 +19,17 @@ body {
 
 .main-header__nav {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .main-header__list-items {
-    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .main-header__item a {
@@ -133,6 +137,7 @@ main {
     height: 100%;
 }
 
+/* form css */
 .form-control {
     margin: 1rem 0;
 }
@@ -155,6 +160,12 @@ main {
 .form-control input:focus,
 .form-control textarea:focus {
     outline-color: #00695c;
+}
+
+.form-control input.invalid,
+.form-control textarea.invalid {
+
+    border: 2px solid red;
 }
 
 
@@ -186,8 +197,126 @@ button:active {
     cursor: pointer;
 }
 
+/* pagination */
+.pagination {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #00695c;
+    padding: 0.5rem;
+    border: 1px solid #00695c;
+    margin: 0 1rem;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination a.active {
+    background: #00695c;
+    color: white;
+}
+
 .btn:hover,
 .btn:active {
     background-color: #00695c;
     color: white;
+}
+
+.btn.danger {
+    color: red;
+    border-color: red;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+    background: red;
+    color: white;
+}
+
+/* Cart Css */
+
+.cart__item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    width: 40rem;
+    max-width: 90%;
+}
+
+.cart__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    margin-bottom: 1rem;
+}
+
+.cart__item h1,
+.cart__item h2 {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* orders css */
+.orders {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.orders__item h1 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.orders__item {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.orders__products {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.orders__products-item {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #00695c;
+    color: #00695c;
+}
+
+
+/* Login Form */
+.login-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+
+}
+
+/* user error message */
+
+.user-message {
+    margin: auto;
+    width: 90%;
+    border: 1px solid #4771fa;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background: #b9c9ff;
+    text-align: center;
+}
+
+.user-message--error {
+    border-color: red;
+    background: rgb(255, 176, 176);
+    color: red;
 }
